@@ -1,0 +1,317 @@
+.hover-block:hover {
+    background-color: #343a40;
+    text-decoration: none; 
+}
+.product-card {
+    background-color: #323232;
+    border-radius: 10px;
+    padding: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+.product-card .product-image {
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image {
+    transform: translateY(-10px); 
+}
+.product-card:hover .product-text {
+    color: #FF80FF;
+    transition: color 0.3s ease; 
+}
+.product-card:hover {
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+.menu-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.menu-link:hover {
+    background-color: #e0e0e0;
+    color: #000;
+}
+.menu-link.active {
+    background-color: #007bff;
+    color: white; 
+}
+/* css from login */
+.container1 {
+    display: flex;
+    justify-content: center;
+    background: #081b29;
+    min-height: 1000vh;
+}
+.wrapper {
+    position: relative;
+    width: 750px;
+    height: 5000px;
+    background: transparent;
+    background: #081b29;
+    overflow: hidden;
+    border: 2px solid #0ef;
+}
+.wrapper .form-box.login {
+    left: 0;
+    padding: 0 60px 0 40px;
+}
+.wrapper .form-box.login .animation {
+    transform : translateX(0);
+    opacity: 1;
+    filter:blur(0);
+    transition:.7s ease;
+    transition-delay: calc(.1s * var(--j));
+}
+.wrapper.active .form-box.login .animation {
+    transform : translateX(-120%);
+    opacity: 0;
+    filter:blur(10px);
+    transition-delay: calc(.1s * var(--i));
+}
+.wrapper .form-box.register {
+    right: 0;
+    padding: 0 60px 0 40px;
+}
+.wrapper .form-box.register .animation {
+    opacity: 0;
+    filter: blur(10px);
+    transition-delay: calc(.1s * var(--j));
+    transform: translateX(120%);
+    transition: .7s ease;
+}
+
+.wrapper.active .form-box.register .animation {
+    transform: translateX(0);
+    opacity: 1;
+    filter: blur(0);
+    transition-delay: calc(.1s * var(--i));
+}
+
+.wrapper .form-box {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.form-box h2 {
+    font-size: 32px;
+    color: #fff;
+    text-align: center;
+}
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 25px 0;
+}
+.input-box input {
+    width: 100%;
+    height: 50px;
+    border: none; 
+    outline: none;
+    font-size:16px;
+    border-bottom: 2px solid #0ef;
+    color: #fff;
+    background-color: transparent;
+}
+.input-box input:focus + label,
+.input-box input:not(:placeholder-shown) + label {
+    top: -1px;
+    font-size: 15px;
+    color: #0ef;
+}
+
+.input-box:focus-within i,
+.input-box input:not(:placeholder-shown) + i {
+    color: #0ef;
+}
+
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.input-box i {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: 0.5s;
+}
+.btn {
+    position: relative;
+    width: 100%;
+    height: 45px;
+    border: 2px solid #0ef;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    /* background: transparent; */
+}
+.btn:hover {
+    background: ;
+    color: #fff;
+}
+.logreg-link {
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+}
+.logreg-link p a {
+    font-weight: 600;
+    color: #0ef;
+    text-decoration: none;
+}
+.logreg-link p a:hover {
+    color: #0ef;
+    text-decoration: underline;
+}
+.info-text{
+    position: absolute;
+    top:0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.info-text.login{
+    right: 0;
+    text-align: right;
+    padding:0 40px 50px 120px;
+}
+.wrapper .info-text.login .animation {
+    transform : translateX(0);
+    opacity: 1;
+    filter:blur(0);
+    transition:.7s ease;
+    transition-delay: calc(.1s * var(--j));
+}
+.wrapper.active .info-text.login .animation {
+    transform : translateX(120%);
+    opacity: 0;
+    filter:blur(10px);
+    transition-delay: calc(.1s * var(--i));
+}
+.info-text.register{
+    left: 0;
+    text-align: left;
+    padding:0 120px 50px 40px;
+    /* display: none; */
+    pointer-events: none;
+}
+.wrapper .info-text.register .animation {
+transform: translateX(-120%);
+opacity: 0;
+filter: blur(10px);
+transition: .7s ease;
+transition-delay: calc(.1s * var(--j));
+}
+.wrapper.active .info-text.register .animation {
+    transform: translateX(0);
+    opacity: 1;
+    filter: blur(0);
+    transition-delay: calc(.1s * var(--i));  
+}
+.info-text h2{
+    font-size: 32px;
+    color: #fff;
+    line-height:1.3;
+    text-transform:uppercase;
+}
+.info-text p{
+    font-size: 16px;
+    color: #fff;
+    line-height:1.3;
+    text-transform:uppercase;
+}
+.bg-animate{
+    position: absolute;
+    top: -4;
+    right: 0;
+    width: 850px;
+    height: 600px;
+    background: linear-gradient(45deg,#081b29,#0ef);
+    border-bottom:3px solid #0ef;
+    transform:rotate(10deg) skewY(35deg);
+    transform-origin:bottom right;
+    transition:1.5s ease;
+    transition-delay:1.6s
+}
+.active .bg-animate{
+    transform:rotate(0) skewY(0);
+    transition-delay:0.5s
+}
+.bg-animate2{
+    position: absolute;
+    top: 100%;
+    left: 250px;
+    width: 850px;
+    height: 700px;
+    background: #081b29;
+    border-top:3px solid #0ef;
+    transform:rotate(0) skewY(0);
+    transform-origin:bottom left;
+    transition:1.5s ease;
+    transition-delay: .5s
+}
+.active .bg-animate2{
+    transform:rotate(-12deg) skewY(-42deg);
+    transition-delay:1.2s
+}
+/* Đặt chiều cao và căn giữa ảnh */
+.carousel-item img {
+  max-height: 500px;
+  object-fit: contain;
+  width: 100%;
+}
+
+/* Đặt nút điều hướng trên ảnh */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 50px; /* Điều chỉnh độ rộng nút */
+}
+
+/* Định vị nút bấm nằm sát hình ảnh */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5); /* Nền tối mờ */
+  border-radius: 50%;
+  padding: 10px; /* Độ lớn icon */
+}
+
+.carousel {
+  position: relative;
+  max-width: 600px; /* Đặt chiều rộng phù hợp */
+  margin: 0 auto; /* Căn giữa carousel */
+}
+
+/* Tùy chỉnh vị trí nút indicator */
+.carousel-indicators {
+  bottom: -20px; /* Kéo chấm tròn xuống */
+}
+.carousel-control-prev, .carousel-control-next {
+width: 50px; /* Điều chỉnh độ rộng để nút nhỏ hơn */
+}
